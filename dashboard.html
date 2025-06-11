@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hotel Exclusive</title>
+    <link rel="stylesheet" href="stilopagina.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">🏨 Dashboard - Hotel Exclusive</div>
+    <nav>
+        <ul>
+              <li><a href="index.html">Inicio</a></li>
+            <li><a href="habitaciones.html">Habitaciones</a></li>
+            <li><a href="reservaciones.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="autenti.html">Registrarse</a></li>
+            <li><a href="perfil.html">Mi Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="stats">
+    <h1>📊 Estadísticas Generales</h1>
+    <div class="cards">
+        <div class="card">
+            <h2>Reservas Hoy</h2>
+            <p id="reservasCount">45</p>
+        </div>
+        <div class="card">
+            <h2>Ocupación</h2>
+            <p id="ocupacion">85%</p>
+        </div>
+        <div class="card">
+            <h2>Ingresos Mensuales</h2>
+            <p id="ingresos">$12,500</p>
+        </div>
+    </div>
+</section>
+
+<section class="charts">
+    <h2>📈 Gráficos de Datos</h2>
+    <div class="chart-container">
+        <canvas id="reservasChart"></canvas>
+        <canvas id="ingresosChart"></canvas>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hotel Exclusive. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const reservasData = [10, 15, 20, 25, 30, 35, 40];
+    const ingresosData = [500, 1500, 2500, 3500, 5000, 7000, 12500];
+
+    new Chart(document.getElementById("reservasChart"), {
+        type: 'line',
+        data: {
+            labels: ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"],
+            datasets: [{
+                label: "Reservas Diarias",
+                data: reservasData,
+                backgroundColor: "rgba(0,76,140,0.2)",
+                borderColor: "#004c8c",
+                borderWidth: 2
+            }]
+        }
+    });
+
+    new Chart(document.getElementById("ingresosChart"), {
+        type: 'bar',
+        data: {
+            labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"],
+            datasets: [{
+                label: "Ingresos Mensuales",
+                data: ingresosData,
+                backgroundColor: "#004c8c"
+            }]
+        }
+    });
+</script>
+
+</body>
+</html>

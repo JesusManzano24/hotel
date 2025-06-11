@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Exclusive - Reservaciones</title>
+    <link rel="stylesheet" href="reservaciones.css">
+    <link rel="stylesheet" href="stilopagina.css">
+    
+</head>
+<body>
+
+<header>
+    <div class="logo">Hotel Exclusive</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="habitaciones.html">Habitaciones</a></li>
+            <li><a href="reservaciones.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="autenti.html">Registrarse</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Reserva tu habitación ahora</h1>
+    <p>Encuentra la opción ideal para tu descanso exclusivo.</p>
+</section>
+
+<section class="booking-form">
+    <h2>Realiza tu reserva</h2>
+    <form>
+        <label for="checkin">Fecha de llegada:</label>
+        <input type="date" id="checkin" required>
+
+        <label for="checkout">Fecha de salida:</label>
+        <input type="date" id="checkout" required>
+
+        <label for="adults">Número de adultos:</label>
+        <input type="number" id="adults" min="1" placeholder="Cantidad de adultos" required>
+
+        <label for="children">Número de niños:</label>
+        <input type="number" id="children" min="0" placeholder="Cantidad de niños">
+
+        <label for="room">Tipo de habitación:</label>
+        <select id="room">
+            <option value="estandar">Estándar</option>
+            <option value="premium">Premium</option>
+            <option value="suite">Suite Presidencial</option>
+        </select>
+
+        <button type="submit">Buscar disponibilidad</button>
+    </form>
+</section>
+
+<section class="availability">
+    <h2>Disponibilidad y Precios</h2>
+    <p>Consulta nuestras tarifas y fechas disponibles.</p>
+    <table>
+        <tr>
+            <th>Habitación</th>
+            <th>Precio por noche</th>
+            <th>Disponibilidad</th>
+        </tr>
+        <tr>
+            <td>Estándar</td>
+            <td>$80 USD</td>
+            <td>Disponible</td>
+        </tr>
+        <tr>
+            <td>Premium</td>
+            <td>$120 USD</td>
+            <td>Pocas habitaciones</td>
+        </tr>
+        <tr>
+            <td>Suite Presidencial</td>
+            <td>$250 USD</td>
+            <td>Agotado</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hotel Exclusive. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

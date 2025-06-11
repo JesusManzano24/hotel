@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Exclusive - Acceso</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Hotel Exclusive</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="habitaciones.html">Habitaciones</a></li>
+            <li><a href="reservaciones.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="autenti.html">Registrarse</a></li>
+            <li><a href="perfil.html">Mi Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="auth-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="showLogin()">Iniciar Sesión</button>
+        <button class="tab-button" onclick="showRegister()">Registrarse</button>
+    </div>
+
+    <div class="form-container">
+        <!-- Formulario de Inicio de Sesión -->
+        <form id="loginForm" class="auth-form">
+            <h2>Iniciar Sesión</h2>
+            <label for="login-email">Correo Electrónico:</label>
+            <input type="email" id="login-email" placeholder="Tu correo" required>
+
+            <label for="login-password">Contraseña:</label>
+            <input type="password" id="login-password" placeholder="Tu contraseña" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <!-- Formulario de Registro -->
+        <form id="registerForm" class="auth-form hidden">
+            <h2>Registrarse</h2>
+            <label for="register-name">Nombre:</label>
+            <input type="text" id="register-name" placeholder="Tu nombre" required>
+
+            <label for="register-email">Correo Electrónico:</label>
+            <input type="email" id="register-email" placeholder="Tu correo" required>
+
+            <label for="register-password">Contraseña:</label>
+            <input type="password" id="register-password" placeholder="Crea una contraseña" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Hotel Exclusive. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function showLogin() {
+        document.getElementById("loginForm").classList.remove("hidden");
+        document.getElementById("registerForm").classList.add("hidden");
+        document.querySelector(".tab-button.active").classList.remove("active");
+        document.querySelectorAll(".tab-button")[0].classList.add("active");
+    }
+
+    function showRegister() {
+        document.getElementById("loginForm").classList.add("hidden");
+        document.getElementById("registerForm").classList.remove("hidden");
+        document.querySelector(".tab-button.active").classList.remove("active");
+        document.querySelectorAll(".tab-button")[1].classList.add("active");
+    }
+</script>
+
+</body>
+</html>

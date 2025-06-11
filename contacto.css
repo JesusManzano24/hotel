@@ -1,0 +1,110 @@
+body {
+    font-family: 'Lora', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Sección de Contacto */
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input, .contact textarea, .contact button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.contact textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact button {
+    background-color: #004c8c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #003366;
+}
+
+/* Información de contacto */
+.info {
+    text-align: center;
+    padding: 30px;
+    background-color: #ececec;
+}
+
+/* Mapa */
+.map {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Redes Sociales */
+.social {
+    text-align: center;
+    padding: 30px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #004c8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social a:hover {
+    background-color: #003366;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+}

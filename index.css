@@ -1,0 +1,113 @@
+body {
+    margin: 0;  /* Elimina márgenes predeterminados del body */
+    padding: 0;
+    min-height: 100vh;  /* Corregí el error de "-50vh" */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenido principal (para sticky footer) */
+.wrapper {
+    flex: 1;
+}
+
+/* Footer ajustado al 100% del ancho */
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    background-color: #3f648a;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* El resto de tu CSS (carousel, etc.) se mantiene igual */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+/* ... (el resto de tu CSS actual) ... */
+
+/* Flexbox para centrar imágenes */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste de imágenes */
+.carousel img {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Botones de navegación */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* 📱 Responsividad para móviles */
+@media (max-width: 768px) {
+    .carousel-container {
+        width: 95%;
+    }
+
+    .carousel img {
+        max-height: 300px;
+    }
+
+    button.prev, button.next {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+/* 💻 Ajuste para laptops */
+@media (min-width: 992px) {
+    .carousel-container {
+        max-width: 900px;
+    }
+
+    .carousel img {
+        max-height: 450px;
+    }
+}
+
+/* 🖥 Ajuste para pantallas grandes */
+@media (min-width: 1200px) {
+    .carousel-container {
+        max-width: 1000px;
+    }
+
+    .carousel img {
+        max-height: 500px;
+    }
+}

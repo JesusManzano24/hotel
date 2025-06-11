@@ -1,0 +1,58 @@
+<?php include("db.php"); ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Exclusive - Inicio</title>
+    <link rel="stylesheet" href="stilopagina.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Hotel Exclusive</div>
+    <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+            <li><a href="habitaciones.html">Habitaciones</a></li>
+            <li><a href="reservaciones.html">Reservas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="autenti.html">Registrarse</a></li>
+            <li><a href="perfil.html">Mi Perfil</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <section class="hero">
+        <h1>Tu descanso exclusivo comienza aquí</h1>
+        <button>Reservar ahora</button>
+    </section>
+
+    <section class="intro">
+        <h2>Bienvenido a Hotel Exclusive</h2>
+        <p>Disfruta de nuestras habitaciones con vistas espectaculares y servicio premium.</p>
+    </section>
+    <!-- Nueva Sección con Imagen de Habitaciones -->
+ <section class="habitaciones-preview">
+    <h2>Descubre nuestras habitaciones</h2>
+    <div class="carousel-container">
+        <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+        <div class="carousel">
+            <img id="habitacionImagen" src="" alt="Vista de una habitación de lujo">
+        </div>
+        <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+    </div>
+    <p><a href="habitaciones.html" class="btn">Ver todas las habitaciones</a></p>
+</section>
+
+<!-- Cargar el script correctamente -->
+<script src="index.js"></script>
+
+<footer>
+    <p>&copy; 2025 Hotel Exclusive. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
